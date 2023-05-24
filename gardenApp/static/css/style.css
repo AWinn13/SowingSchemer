@@ -1,5 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*{
-    font-family: 'Lato', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --blue: #08415c;
+  --light-blue: #4c6085;
+  --dark-blue: #252f41;
+  --brown: #563730;
+  --dark-brown: #34221d;
+  --light-brown: #885e59;
+  --light-cream: #fef8ec;
+  --cream: #fdf0d5;
+  --creamAlt: #fcf8d4;
+  --green: #7b904b;
+  --light-green: #afc185;
+  --dark-green: #455129;
+  --yellow: #fff07c;
+  --dark-yellow: #e0c600;
+  --light-yellow: #fff399;
+  --red: #720e07;
+  --dark-red: #4d0a05;
+  --light-red: #a21622;
+}
+
+body {
+  background-color: var(--light-blue);
+}
+
+.mainContainer{
+  
+}
+
+#mainNav {
+  background-color: #7b904b !important;
+}
+.logoMain {
+  max-height: 75px;
+  padding-left: 50px;
+}
+
+#card1,
+#card2,
+#card3 {
+  background-color: #fff07c !important;
+  transition: 200ms;
+  
+}
+
+#card1:hover, #card2:hover, #card3:hover{
+  transform: translateY(5px)
+}
+
+.card-title{
+  font-size: 1rem !important;
+  font-weight: bolder !important;
+  
+}
+
+h3 {
+  font-weight: bolder !important;
+  font-size: 2rem !important;
+}
+
+.secondTitle {
+  font-weight: bolder ;
+  font-size: 1.7rem;
+}
+
+.mainLink{
+  text-decoration: none !important;
 }

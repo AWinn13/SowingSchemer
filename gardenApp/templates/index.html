@@ -7,22 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
+
+
 <body>
-    <h1>Info From Server:</h1>
-    <p>Name: {{name}}</p>
-    <p>Color: {{favorite_color}}</p>
-    <p>Pets</p>
-    <ul>
-        {% for pet in pets %}
-        <li>{{pet}}</li>
-        {% endfor %}
-    </ul>
+    <div class="mainContainer">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow" id="mainNav">
+            <div class="mainContainer">
+                <a class='navbar-brand' href="/"><img src="{% static 'img/logo-no-background.png'%}" alt="logo"
+                        class="logoMain"></a>
+            </div>
+        </nav>
+        <div class="container-fluid text-center mt-3">
+            <h3>Welcome to the Sowing Schemer!</h3>
+            <div class="secondTitle">Your Personal Garden Planner</div>
+            <div class="container d-flex justify-content-center mt-5">
+                <div class="card m-1" id="card2">
+                    <img src="{% static 'img/vegHarvest.jpg'%}" alt="logo" class="card-img-top" id="cardImg1"
+                        style="max-height: 283px;">
+                    <div class="card-body ">
+                        <div class="card-title">Keep a Garden Journal with Your Harvest Results</div>
+                    </div>
+                </div>
+                <a href="/gardenjournal" class="mainLink">
+                    <div class="card m-1" id="card1">
+                        <img src="{% static 'img/gardenLayout.jpg'%}" alt="logo" class="card-img-top" id="cardImg2"
+                            style="height: 283px;">
+                        <div class="card-body">
+                            <div class="card-title">Plan Your Garden Layout With Our Interactive Planner</div>
+                        </div>
+                    </div>
+                </a>
+                <div class="card m-1" id="card3">
+                    <img src="{% static 'img/seedling.jpg'%}" alt="logo" class="card-img-top" id="cardImg3"
+                        style="max-height: 283px;">
+                    <div class="card-body">
+                        <div class="card-title">Track Sowing Dates for all of Your Vegetables and Fruits!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

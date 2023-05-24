@@ -3,15 +3,24 @@ from django.http import HttpResponse
 
 
 def index(request):
-    context = {
-        "name": "Noelle",
-        "favorite_color": "turquoise",
-        "pets": ["Bruce", "Fitz", "Georgie"]
-    }
-    return render(request, "index.html", context)
+    return render(request, "index.html")
+
+# def register(request):
+
+
 
 def login(request):
     return render(request, "login.html")
+
+def gardenjournal(request):
+    return render(request, "gardenjournal.html")
+
+# def journalentry(request):
+#     entryDate = request.Post['date']
+#     entry
+
+
+
 
 # ! EXAMPLES
 # def one_method(request):                # no values passed via URL
