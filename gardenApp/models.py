@@ -13,13 +13,13 @@ class PostForm(models.Manager):
         errors = {}
 
         # conditions to be met for the username length
-        if len(postData['first_name']) < 1:
+        if len(postData["first_name"]) < 1:
             errors["first_name"] = "Minimum 1 characters required"
-        if len(postData['last_name']) < 1:
+        if len(postData["last_name"]) < 1:
             errors["text"] = "Last Name must be at least 1 character"
-        if len(postData['email']) < 4:
+        if len(postData["email"]) < 4:
             errors["email"] = "Minimum 4 characters required"
-        if len(postData['password']) < 7:
+        if len(postData["password"]) < 7:
             errors["password"] = "Password must be at least 7 characters"
 
         # return any errors if found
@@ -38,6 +38,15 @@ class User(models.Model):
 
 class SeedJournal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    variety = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
+    numOfPlants = models.IntegerField()
+    comments = models.TextField()
+    datePlanted = models.DateField(null=True)
+    cellIdStart = models.IntegerField()
+    cellIdEnd = models.IntegerField()
+    daysToGerm = models.IntegerField()
+
 
 
 class Garden(models.Model):
@@ -57,10 +66,12 @@ class Vegetable(models.Model):
     variety = models.CharField(max_length=100)
     numOfPlants = models.IntegerField()
     amountOfSun = models.CharField(max_length=15)
+    spacing = models.IntegerField()
     length = models.IntegerField()
     width = models.IntegerField()
     datePlanted = models.DateField(null=True)
     seedling = models.BooleanField()
+    directSow = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

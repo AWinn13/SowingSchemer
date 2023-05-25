@@ -21,23 +21,30 @@
             <div class="navContainer">
                 <a class='navbar-brand' href="/"><img src="{% static 'img/logo-no-background.png'%}" alt="logo"
                         class="logoMain"></a>
-                <form action="/login" method="get">
-                    <button class="mainLoginBtn">Login/Register</button>
-                </form>
+                <div class="navButtons">
+                    <form action="/dashboard" method="get">
+                        <button class="mainLoginBtn">My Dashboard</button>
+                    </form>
+                    <form action="/login" method="get">
+                        <button class="mainLoginBtn">Login/Register</button>
+                    </form>
+                </div>
             </div>
         </nav>
         <div class="container-fluid text-center mt-3">
             <h3>Welcome to the Sowing Schemer!</h3>
             <div class="secondTitle">Your Personal Garden Planner</div>
             <div class="container d-flex justify-content-center mt-5">
-                <div class="card m-1" id="card2">
-                    <img src="{% static 'img/vegHarvest.jpg'%}" alt="logo" class="card-img-top" id="cardImg1"
-                        style="max-height: 283px;">
-                    <div class="card-body ">
-                        <div class="card-title">Keep a Garden Journal with Your Harvest Results</div>
-                    </div>
-                </div>
                 <a href="/gardenjournal" class="mainLink">
+                    <div class="card m-1" id="card2">
+                        <img src="{% static 'img/vegHarvest.jpg'%}" alt="logo" class="card-img-top" id="cardImg1"
+                            style="max-height: 283px;">
+                        <div class="card-body ">
+                            <div class="card-title">Keep a Garden Journal with Your Harvest Results</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/gardenlayout" class="mainLink">
                     <div class="card m-1" id="card1">
                         <img src="{% static 'img/gardenLayout.jpg'%}" alt="logo" class="card-img-top" id="cardImg2"
                             style="height: 283px;">
@@ -46,17 +53,19 @@
                         </div>
                     </div>
                 </a>
-                <div class="card m-1" id="card3">
-                    <img src="{% static 'img/seedling.jpg'%}" alt="logo" class="card-img-top" id="cardImg3"
-                        style="max-height: 283px;">
-                    <div class="card-body">
-                        <div class="card-title">Track Sowing Dates for all of Your Vegetables and Fruits!</div>
+                <a href="/seedlingjournal" class="mainLink">
+                    <div class="card m-1" id="card3">
+                        <img src="{% static 'img/seedling.jpg'%}" alt="logo" class="card-img-top" id="cardImg3"
+                            style="max-height: 283px;">
+                        <div class="card-body">
+                            <div class="card-title">Track Sowing Dates for all of Your Vegetables and Fruits!</div>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>

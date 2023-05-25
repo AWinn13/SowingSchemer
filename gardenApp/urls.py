@@ -9,7 +9,8 @@ urlpatterns = [
     path("login/user", views.loginUser, name="loginUser"),
     path("login/create", views.register, name="register"),
     path("gardenjournal", views.gardenjournal, name="gardenjournal"),
-    path("gardenjournal/create", views.createjournal, name="journal")
+    path("gardenjournal/create", views.createjournal, name="journal"), 
+    path("seedlingjournal", views.seedlingjournal, name="seedlingjournal"),
     
     ]
 urlpatterns += staticfiles_urlpatterns()
