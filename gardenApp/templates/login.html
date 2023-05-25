@@ -7,50 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Register</title>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
     <script src="{% static 'js/script.js' %}"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow" id="mainNav">
+        <div class="mainContainer">
+            <a class='navbar-brand' href="/"><img src="{% static 'img/logo-no-background.png'%}" alt="logo"
+                    class="logoMain"></a>
+        </div>
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col border mt-3 p-3">
-                <span>Register</span>
-                <form action="" method="post">
-                    <div class="mb-3">
-                        <label for="first_name" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="first_name" placeholder="First Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="last_name" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="last_name" placeholder="Last Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-                    </div>
-                </form>
+                <h4>Register</h5>
+                    <form action="" method="post" class="form-cloating">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="first_name" placeholder="First Name"
+                                name="first_name">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="last_name" placeholder="Last Name"
+                                name="last_name">
+                            <label for="first_name">Last Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="email" name="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="password" placeholder="Password"
+                                name="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="confirmpassword"
+                                placeholder="Confirm Password" name="confirmPassword">
+                            <label for="confirmpassword">Confirm Password</label>
+                        </div>
+                        <div class="centerBtn"><button class="regButton">Submit</button></div>
+                    </form>
             </div>
             <div class="col border mt-3 p-3">
-                <span>Login</span>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <h4>Login</h4>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="email" name="email">
+                    <label for="email">Email</label>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                    <label for="password">Password</label>
                 </div>
+                <div class="centerBtn"><button class="regButton">Submit</button></div>
             </div>
         </div>
     </div>

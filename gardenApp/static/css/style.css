@@ -29,12 +29,13 @@
 
 body {
   background-color: var(--light-blue);
+  color: #CCCCCC;
 }
 
 .mainContainer{
   
 }
-
+/* ------------------Navbar------------------ */
 #mainNav {
   background-color: #7b904b !important;
 }
@@ -43,10 +44,37 @@ body {
   padding-left: 50px;
 }
 
+/* --------------Login and Reg------------- */
+
+.centerBtn{
+  text-align: center;
+}
+.regButton{
+  border-radius: 10px;
+  border: none;
+  padding: 7px 10px 10px;
+  font-size: 20px;
+  background-color: var(--dark-brown);
+  color: var(--light-cream);
+  width: 100%;
+  
+}
+
+.regButton:hover{
+  background-color: var(--brown);
+}
+
+
+
+
+
+/* -------------Index Layout--------------- */
+
 #card1,
 #card2,
 #card3 {
-  background-color: #fff07c !important;
+  background-color: var(--dark-brown) !important;
+  color: var(--creamAlt);
   transition: 200ms;
   
 }
@@ -57,7 +85,7 @@ body {
 
 .card-title{
   font-size: 1rem !important;
-  font-weight: bolder !important;
+  font-weight: 1.5rem !important;
   
 }
 
@@ -73,4 +101,31 @@ h3 {
 
 .mainLink{
   text-decoration: none !important;
+}
+
+/* -------------Garden Journal-------------- */
+.journalButton{
+  color: var(--dark-brown);
+  font-weight: bolder;
+  font-size: 1.25rem;
+  background-color: var(--light-yellow); 
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  max-width: 500px ;
+  margin: 0 auto;
+}
+.journalButton:hover{
+  background-color: #6b713b;
+}
+
+.header{
+  text-align: center;
+  padding: 7px;
+  margin-top: 2%;
+}
+
+.headerText{
+
 }

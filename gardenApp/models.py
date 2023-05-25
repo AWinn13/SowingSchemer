@@ -44,8 +44,6 @@ class Vegetable(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class GardenJournal(models.Model):
-    id = models.IntegerField(primary_key=True, editable=False)
-    user  = models.ForeignKey(User, on_delete= models.CASCADE)
     title = models.CharField(max_length=100)
     date = models.DateField()
     completed = models.TextField(blank=True)
@@ -54,6 +52,6 @@ class GardenJournal(models.Model):
     airTemp = models.IntegerField(blank=True)
     weather = models.CharField(max_length=150, blank=True)
     planted = models.TextField(blank=True)
-    entry = models.TextField()
+    observation = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

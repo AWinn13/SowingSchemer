@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .models import GardenJournal
 
 
 def index(request):
@@ -13,6 +14,37 @@ def login(request):
     return render(request, "login.html")
 
 def gardenjournal(request):
+    return render(request, "gardenjournal.html")
+
+def createjournal(request):
+    if request.method == 'POST':
+        # Retrieve form data from POST request
+        title = request.POST.get('title')
+        date = request.POST.get('date')
+        completed = request.POST.get('completed')
+        todo = request.POST.get('todo')
+        soil_temp = request.POST.get('soilTemp')
+        air_temp = request.POST.get('airTemp')
+        weather = request.POST.get('weather')
+        planted = request.POST.get('planted')
+        observation = request.POST.get('observation')
+
+        # Create and save a new instance of the model
+        new_entry = GardenJournal(
+            title=title,
+            date=date,
+            completed=completed,
+            todo=todo,
+            soilTemp=soil_temp,
+            airTemp=air_temp,
+            weather=weather,
+            planted=planted,
+            observation=observation
+        )
+        new_entry.save()
+        print(new_entry)
+        # Redirect to a success page or the desired URL
+        return redirect('/')
     return render(request, "gardenjournal.html")
 
 # def journalentry(request):

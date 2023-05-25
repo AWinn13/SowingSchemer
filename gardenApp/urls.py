@@ -6,8 +6,9 @@ from . import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("login", views.login, name="login"),
-    path("gardenjournal", views.gardenjournal, name="gardenjournal")
-]
+    path("gardenjournal", views.gardenjournal, name="gardenjournal"),
+    path("gardenjournal/create", views.createjournal, name="journal")
+    ]
 urlpatterns += staticfiles_urlpatterns()
 
 # ! EXAMPLE

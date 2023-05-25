@@ -22,17 +22,84 @@
             </div>
         </nav>
         <div class="w-75 mx-auto">
-            <form action="">
-                <div class="form-floating">
+            <div class="header">
+                <h2 class="headerText">*User's Name* Garden Journal</h2>
+            </div>
+            <form action="/gardenjournal/create" method="post">
+                {% csrf_token %}
+                <div class="mt-4">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" id="title" placeholder="Title">
-                            <label for="title">Title</label>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+                                <label for="title">Title</label>
+                            </div>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" id="title" placeholder="Title">
-                            <label for="title">Title</label>
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="floatingdate" placeholder="Date"
+                                    name="date">
+                                <label for="floatingdate">Date</label>
+                            </div>
                         </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="weather" placeholder="Weather"
+                                    name="weather">
+                                <label for="weather">Weather</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="soilTemp" placeholder="Soil Temperature"
+                                    name="soilTemp">
+                                <label for="soilTemp">Soil Temperature</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="airTemp" placeholder="Air Temperature"
+                                    name="airTemp">
+                                <label for="airTemp">Air Temperature</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="completed" placeholder="Tasks Completed"
+                                    name="completed"></textarea>
+                                <label for="completed">Tasks Completed</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="todo" placeholder="Need To Do"
+                                    name="todo"></textarea>
+                                <label for="todo">Need To Do</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="planted" placeholder="Plants Planted"
+                                    name="planted"></textarea>
+                                <label for="planted">Plants Planted</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="observation" placeholder="Observations"
+                                    name="observation"></textarea>
+                                <label for="observation">Observations</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <button type="submit" class="journalButton">Add An Entry To Your Garden Journal</button>
                     </div>
                 </div>
             </form>
