@@ -24,7 +24,15 @@
         <div class="row">
             <div class="col border mt-3 p-3">
                 <h4>Register</h5>
-                    <form action="" method="post" class="form-cloating">
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li {% if message.tags %} class="{{ message.tags }}"{% endif %} id="errMessages">{{ message }}</li>    
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <form action="/login/create" method="post" class="form-floating">
+                        {% csrf_token %}
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="first_name" placeholder="First Name"
                                 name="first_name">
@@ -44,25 +52,23 @@
                                 name="password">
                             <label for="password">Password</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="confirmpassword"
-                                placeholder="Confirm Password" name="confirmPassword">
-                            <label for="confirmpassword">Confirm Password</label>
-                        </div>
                         <div class="centerBtn"><button class="regButton">Submit</button></div>
                     </form>
             </div>
             <div class="col border mt-3 p-3">
                 <h4>Login</h4>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="email" name="email">
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-                    <label for="password">Password</label>
-                </div>
-                <div class="centerBtn"><button class="regButton">Submit</button></div>
+                <form action="/login/user" method="post">
+                    {% csrf_token %}
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="email" name="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="centerBtn"><button class="regButton">Submit</button></div>
+                </form>
             </div>
         </div>
     </div>

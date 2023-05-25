@@ -6,8 +6,11 @@ from . import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("login", views.login, name="login"),
+    path("login/user", views.loginUser, name="loginUser"),
+    path("login/create", views.register, name="register"),
     path("gardenjournal", views.gardenjournal, name="gardenjournal"),
     path("gardenjournal/create", views.createjournal, name="journal")
+    
     ]
 urlpatterns += staticfiles_urlpatterns()
 

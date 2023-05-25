@@ -32,16 +32,35 @@ body {
   color: #CCCCCC;
 }
 
-.mainContainer{
-  
-}
 /* ------------------Navbar------------------ */
+.navContainer{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 #mainNav {
   background-color: #7b904b !important;
+  position: sticky;
 }
 .logoMain {
   max-height: 75px;
   padding-left: 50px;
+}
+
+.mainLoginBtn{
+  background-color: var(--dark-brown);
+  color: var(--creamAlt);
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 15px;
+  
+}
+.mainLoginBtn:hover{
+  background-color: var(--light-yellow);
+  color: var(--dark-brown);
 }
 
 /* --------------Login and Reg------------- */
@@ -54,14 +73,20 @@ body {
   border: none;
   padding: 7px 10px 10px;
   font-size: 20px;
-  background-color: var(--dark-brown);
-  color: var(--light-cream);
+  background-color: var(--light-yellow);
+  color: var(--dark-brown);
   width: 100%;
   
 }
 
 .regButton:hover{
   background-color: var(--brown);
+  color: var(--light-cream);
+}
+
+.errMessages{
+  color: var(--red);
+  font-weight: bold;
 }
 
 
